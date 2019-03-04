@@ -1,0 +1,20 @@
+<h2>Show Inventory</h2>
+
+<ul>
+
+  <li>
+    <strong>Vin:</strong>
+    <%= @inventory.vin %>
+  </li>
+
+  <li>
+    <strong>Dealer:</strong>
+    <%= @inventory.dealer_id %>
+  </li>
+
+  <li>
+    <strong>Raw json:</strong>
+    <%= @inventory.raw_json %>
+  </li>
+
+</ul>

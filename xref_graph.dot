@@ -1,0 +1,74 @@
+digraph "xref graph" {
+  "lib/vw_stock.ex"
+  "lib/vw_stock/application.ex"
+  "lib/vw_stock/application.ex" -> "lib/vw_stock/repo.ex"
+  "lib/vw_stock/application.ex" -> "lib/vw_stock_web/endpoint.ex"
+  "lib/vw_stock_web/endpoint.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock_web/endpoint.ex" -> "lib/vw_stock_web/router.ex" [label="(compile)"]
+  "lib/vw_stock_web/router.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock/conversion.ex"
+  "lib/vw_stock/dealers/dealer.ex"
+  "lib/vw_stock/dealers/dealer.ex" -> "lib/vw_stock/conversion.ex"
+  "lib/vw_stock/dealers/dealers.ex"
+  "lib/vw_stock/dealers/dealers.ex" -> "lib/vw_stock/dealers/dealer.ex" [label="(compile)"]
+  "lib/vw_stock/dealers/dealers.ex" -> "lib/vw_stock/dealers/inventory.ex" [label="(compile)"]
+  "lib/vw_stock/dealers/dealers.ex" -> "lib/vw_stock/repo.ex"
+  "lib/vw_stock/dealers/inventory.ex"
+  "lib/vw_stock/map.ex"
+  "lib/vw_stock/repo.ex"
+  "lib/vw_stock/tasks/load_dealer_inventory.ex"
+  "lib/vw_stock/tasks/load_dealer_inventory.ex" -> "lib/vw_stock/dealers/dealer.ex" [label="(compile)"]
+  "lib/vw_stock/tasks/load_dealer_inventory.ex" -> "lib/vw_stock/dealers/dealers.ex"
+  "lib/vw_stock/tasks/load_dealer_inventory.ex" -> "lib/vw_stock/vw_api.ex"
+  "lib/vw_stock/vw_api.ex" -> "lib/vw_stock/dealers/dealer.ex" [label="(compile)"]
+  "lib/vw_stock/vw_api.ex" -> "lib/vw_stock/dealers/inventory.ex" [label="(compile)"]
+  "lib/vw_stock/vw_api.ex"
+  "lib/vw_stock_web.ex"
+  "lib/vw_stock_web/channels/user_socket.ex"
+  "lib/vw_stock_web/controllers/dealer_controller.ex"
+  "lib/vw_stock_web/controllers/dealer_controller.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock_web/controllers/dealer_controller.ex" -> "lib/vw_stock_web/gettext.ex" [label="(compile)"]
+  "lib/vw_stock_web/controllers/dealer_controller.ex" -> "lib/vw_stock_web/router.ex" [label="(compile)"]
+  "lib/vw_stock_web/controllers/dealer_controller.ex" -> "lib/vw_stock/dealers/dealers.ex"
+  "lib/vw_stock_web/controllers/dealer_controller.ex" -> "lib/vw_stock/vw_api.ex"
+  "lib/vw_stock_web/controllers/inventory_controller.ex"
+  "lib/vw_stock_web/controllers/inventory_controller.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock_web/controllers/inventory_controller.ex" -> "lib/vw_stock_web/gettext.ex" [label="(compile)"]
+  "lib/vw_stock_web/controllers/inventory_controller.ex" -> "lib/vw_stock_web/router.ex" [label="(compile)"]
+  "lib/vw_stock_web/controllers/inventory_controller.ex" -> "lib/vw_stock/dealers/dealers.ex"
+  "lib/vw_stock_web/controllers/page_controller.ex"
+  "lib/vw_stock_web/controllers/page_controller.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock_web/controllers/page_controller.ex" -> "lib/vw_stock_web/gettext.ex" [label="(compile)"]
+  "lib/vw_stock_web/controllers/page_controller.ex" -> "lib/vw_stock_web/router.ex" [label="(compile)"]
+  "lib/vw_stock_web/endpoint.ex"
+  "lib/vw_stock_web/gettext.ex"
+  "lib/vw_stock_web/router.ex"
+  "lib/vw_stock_web/views/dealer_view.ex"
+  "lib/vw_stock_web/views/dealer_view.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/dealer_view.ex" -> "lib/vw_stock_web/views/error_helpers.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/error_helpers.ex" -> "lib/vw_stock_web/gettext.ex"
+  "lib/vw_stock_web/views/dealer_view.ex" -> "lib/vw_stock_web/gettext.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/dealer_view.ex" -> "lib/vw_stock_web/router.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/dealer_view.ex" -> "lib/vw_stock/map.ex"
+  "lib/vw_stock_web/views/error_helpers.ex"
+  "lib/vw_stock_web/views/error_view.ex"
+  "lib/vw_stock_web/views/error_view.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/error_view.ex" -> "lib/vw_stock_web/views/error_helpers.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/error_view.ex" -> "lib/vw_stock_web/gettext.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/error_view.ex" -> "lib/vw_stock_web/router.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/inventory_view.ex"
+  "lib/vw_stock_web/views/inventory_view.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/inventory_view.ex" -> "lib/vw_stock_web/views/error_helpers.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/inventory_view.ex" -> "lib/vw_stock_web/gettext.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/inventory_view.ex" -> "lib/vw_stock_web/router.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/layout_view.ex"
+  "lib/vw_stock_web/views/layout_view.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/layout_view.ex" -> "lib/vw_stock_web/views/error_helpers.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/layout_view.ex" -> "lib/vw_stock_web/gettext.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/layout_view.ex" -> "lib/vw_stock_web/router.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/page_view.ex"
+  "lib/vw_stock_web/views/page_view.ex" -> "lib/vw_stock_web.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/page_view.ex" -> "lib/vw_stock_web/views/error_helpers.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/page_view.ex" -> "lib/vw_stock_web/gettext.ex" [label="(compile)"]
+  "lib/vw_stock_web/views/page_view.ex" -> "lib/vw_stock_web/router.ex" [label="(compile)"]
+}

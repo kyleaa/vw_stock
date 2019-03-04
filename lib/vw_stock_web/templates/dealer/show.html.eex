@@ -1,0 +1,47 @@
+<h2>Show Dealer</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @dealer.raw_json["name"] %>
+  </li>
+
+  <li>
+    <strong>Latlong:</strong>
+    <%= @dealer.raw_json["latlong"] %>
+  </li>
+
+  <li>
+    <strong>Url:</strong>
+    <%= @dealer.raw_json["url"] %>
+  </li>
+
+  <li>
+    <strong>Address1:</strong>
+    <%= @dealer.raw_json["address1"] %>
+  </li>
+
+  <li>
+    <strong>Address2:</strong>
+    <%= @dealer.raw_json["address2"] %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @dealer.raw_json["city"] %>
+  </li>
+
+  <li>
+    <strong>State:</strong>
+    <%= @dealer.raw_json["state"] %>
+  </li>
+
+  <li>
+    <strong>Postalcode:</strong>
+    <%= @dealer.raw_json["postalcode"] %>
+  </li>
+
+</ul>
+
+<span><%= link "Back", to: dealer_path(@conn, :index) %></span>
